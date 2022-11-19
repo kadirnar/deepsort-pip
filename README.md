@@ -3,7 +3,7 @@
   DeepSort-Pip: Packaged version of the DeepSort repository  
 </h2>
 <h4>
-    <img width="500" alt="teaser" src="https://github.com/kadirnar/sort-pip/blob/05b7b968926a40324c7162041d875d6b53a02651/doc/sort_video.gif">
+    <img width="500" alt="teaser" src="doc/uav_video.gif">
 </h4>
 </div>
 
