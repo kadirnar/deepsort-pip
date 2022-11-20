@@ -1,3 +1,3 @@
-from deepsort.tracker import Tracker
+from deepsort.tracker import DeepSortTracker
 
-__version__ = "0.0.4"
+__version__ = "0.0.5"

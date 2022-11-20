@@ -4,9 +4,10 @@ import numpy as np
 
 from . import iou_matching, kalman_filter, linear_assignment
 from .track import Track
+from .nn_matching import NearestNeighborDistanceMetric
 
 
-class Tracker:
+class DeepSortTracker:
     """
     This is the multi-target tracker.
 
@@ -35,9 +36,8 @@ class Tracker:
         The list of active tracks at the current time step.
 
     """
-
-    def __init__(self, metric, max_iou_distance=0.7, max_age=30, n_init=3):
-        self.metric = metric
+    def __init__(self, metric_name="euclidean", max_iou_distance=0.7, max_age=30, n_init=3, max_dist=0.2, nn_budget=100):
+        self.metric = NearestNeighborDistanceMetric(metric_name, max_dist, nn_budget)
         self.max_iou_distance = max_iou_distance
         self.max_age = max_age
         self.n_init = n_init

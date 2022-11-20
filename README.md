@@ -17,9 +17,9 @@ pip install deepsort
 
 ### Detection Model + DeepSort 
 ```python
-from deepsort.tracker import Tracker
+from deepsort.tracker import DeepSortTracker
 
-tracker = Tracker(args)
+tracker = DeepSortTracker(args)
 for image in images:
    dets = detector(image)
    online_targets = tracker.update(dets)
